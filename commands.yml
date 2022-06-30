@@ -1,0 +1,7 @@
+# kubectl port-forward kubia-unhealthy 8082:8080 - forwards request from port 8082 from the machine to a running pod at port 8080
+# k label pod kubia-rxrl5 type=special - adds a label of type:special to a pod
+# k get pods --show-labels - show all pods with their labels
+# k label pod kubia-rxrl5 app=foo --overwrite - Change the label of a pod
+#  k edit rc kubia - edit ReplicationController named kubiaß
+# kubectl scale rc kubia --replicas=3 - scale pods
+# kubectl delete rc kubia --cascade=false - deleted the ReplicationController so the pods are on their own.

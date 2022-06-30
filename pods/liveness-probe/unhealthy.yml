@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kubia-unhealthy
+  labels:
+    app: unhealthy
+spec:
+  containers:
+    - name: kubia-unhealthy
+      image: luksa/kubia-unhealthy
+      livenessProbe:
+        httpGet:
+          path: /
+          port: 8080
+        initialDelaySeconds: 15 # Always remember to set an initial delay to account for your app’s startup time.

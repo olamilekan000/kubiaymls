@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: elephant
+  namespace: default
+spec:
+  containers:
+  - image: polinux/stress
+    name: mem-stress
+    resources:
+      limits:
+        memory: 20Mi
+      requests:
+        memory: 5Mi
+    # command:
+    # - stress    
